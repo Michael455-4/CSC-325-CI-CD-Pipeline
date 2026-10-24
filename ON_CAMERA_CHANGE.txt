@@ -1,0 +1,17 @@
+BEFORE RECORDING: do not apply the following change yet.
+
+1. In api/views.py, replace the EchoView response with:
+        return Response({'message': 'Hello from CSC 325!', 'version': '2.0'})
+
+2. In api/tests.py, add to the end of test_echo_endpoint:
+        self.assertEqual(response.json()['version'], '2.0')
+
+3. Run: python manage.py test --verbosity 2
+4. Commit and push on feature branch:
+        git switch -c feature/echo-version
+        git add api/views.py api/tests.py
+        git commit -m "Add version field to echo endpoint"
+        git push -u origin feature/echo-version
+5. Open a pull request and merge into protected main; the merge causes the 4-stage main run.
+6. Open the actual run in Actions; capture its precise URL after it is green.
+7. Deploy echo stage is a simulation; it doesn't create a public hosted endpoint.
