@@ -11,7 +11,13 @@ class EchoView(APIView):
     def get(self, request):
         return Response({
             'message': 'Hello from CSC 325!',
-            'version': '2.0'
+            'version': '2.0',
+            'course': 'CSC 325'
+            
+            
+
+          
+
             
             
             })
