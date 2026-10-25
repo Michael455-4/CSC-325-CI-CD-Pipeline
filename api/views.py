@@ -12,7 +12,9 @@ class EchoView(APIView):
         return Response({
             'message': 'Hello from CSC 325!',
             'version': '2.0',
-            'course': 'CSC 325'
+            'course': 'CSC 325',
+            'status': 'active',
+            'pipeline': 'CI/CD',
             
             
 
