@@ -15,6 +15,9 @@ class ApiTests(TestCase):
         self.assertEqual(response.json()['version'], '2.0')
         self.assertEqual(response.json()['course'], 'CSC 325')
         
+        
+        
+        
 
        
 
