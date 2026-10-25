@@ -9,4 +9,9 @@ class HealthView(APIView):
 
 class EchoView(APIView):
     def get(self, request):
-        return Response({'message': 'Hello from CSC 325!'})
+        return Response({
+            'message': 'Hello from CSC 325!',
+            'version': '2.0'
+            
+            
+            })

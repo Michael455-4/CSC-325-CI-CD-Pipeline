@@ -12,3 +12,12 @@ class ApiTests(TestCase):
         response = self.client.get(reverse('echo'))
         self.assertEqual(response.status_code, 200)
         self.assertEqual(response.json()['message'], 'Hello from CSC 325!')
+        self.assertEqual(response.json()['version'], '2.0')
+
+       
+
+
+
+
+
+
